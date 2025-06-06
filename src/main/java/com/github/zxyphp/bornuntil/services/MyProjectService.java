@@ -21,7 +21,7 @@ public class MyProjectService implements ProjectActivity {
         return CompletableFuture.runAsync(() -> {
             StatusBar statusBar = WindowManager.getInstance().getStatusBar(project);
             if (statusBar != null) {
-                statusBar.addWidget(new BornUntilStatusWidget(project), project);
+                statusBar.addWidget(new BornUntilStatusWidget(project), "after Position", project);
             }
         });
     }
