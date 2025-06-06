@@ -4,6 +4,7 @@
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
 <!-- Plugin description -->
+BornUntil is a gentle reminder plugin for developers
 闲暇之余，纯粹出于尝试的心理，想摸索一遍这个流程
 
 珍惜时间，与诸君共勉！
