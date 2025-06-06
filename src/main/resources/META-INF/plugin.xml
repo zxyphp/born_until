@@ -5,7 +5,19 @@
     <version>1.0.0</version>
     <vendor>zxyphp</vendor>
 
-    <description><![CDATA[BornUntil is a gentle reminder plugin for developers. It shows the time passed since your birth directly in the IDE, helping you stay mindful of time and purpose.]]></description>
+    <description>
+        <![CDATA[
+        BornUntil - A gentle reminder of your time.
+        <p>BornUntil是一个温柔但坚定的提醒者。</p>
+        <p>每天在编辑器下方，实时显示你从出生至今的岁月流转。</p>
+        <p>它不会打扰你，只是静静地告诉你：时间在走，别忘了你最初的梦想。</p>
+        <p>适合所有程序员，特别是那些努力生活、追逐技术、又常常忘记时间的人。</p>
+        <p>✨ 支持自定义出生日期设置。</p>
+        <p>✨ 实时显示格式：<code>31岁8个月零1天</code>。</p>
+        <p>✨ 永不打扰，无广告、无弹窗。</p>
+        <p>⌛ 是提醒，也是陪伴。</p>
+    ]]>
+    </description>
 
 
     <depends>com.intellij.modules.platform</depends>
