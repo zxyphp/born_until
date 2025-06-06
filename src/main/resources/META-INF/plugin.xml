@@ -1,15 +1,43 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.zxyphp.bornuntil</id>
-    <name>born_until</name>
+    <name>Bornuntil</name>
+    <version>1.0.0</version>
     <vendor>zxyphp</vendor>
+
+    <description>
+        <![CDATA[
+        <p>🕰️ <strong>BornUntil</strong> 是一个温柔但坚定的提醒者。</p>
+        <p>每天在编辑器下方，实时显示你从出生至今的岁月流转。</p>
+        <p>它不会打扰你，只是静静地告诉你：时间在走，别忘了你最初的梦想。</p>
+        <p>适合所有程序员，特别是那些努力生活、追逐技术、又常常忘记时间的人。</p>
+        <p>✨ 支持自定义出生日期设置。</p>
+        <p>✨ 实时显示格式：<code>31岁8个月零1天</code>。</p>
+        <p>✨ 永不打扰，无广告、无弹窗。</p>
+        <p>⌛ 是提醒，也是陪伴。</p>
+    ]]>
+    </description>
+
 
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
+
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.zxyphp.bornuntil.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.zxyphp.bornuntil.startup.MyProjectActivity" />
+        <projectService serviceImplementation="com.github.zxyphp.bornuntil.services.MyProjectService"/>
     </extensions>
+
+    <!--  监听器  -->
+    <applicationListeners>
+        <listener class="com.github.zxyphp.bornuntil.listeners.MyProjectManagerListener"
+                  topic="com.github.zxyphp.bornuntil.ProjectManagerListener"/>
+    </applicationListeners>
+
+    <actions>
+        <action id="BornUntilActionID" class="com.github.zxyphp.bornuntil.BornUntilAction" text="Born Until"
+                description="Born Until Action">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
